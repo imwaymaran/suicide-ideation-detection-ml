@@ -13,11 +13,20 @@ This project aims to build a machine learning model that can detect suicide idea
 ## Folder Structure
 
 <pre><code>.
-├── data/           # Raw and processed data
-├── notebooks/      # Jupyter notebooks for EDA and modeling
-├── scripts/        # Python scripts for preprocessing and training
-├── models/         # Saved models
-├── vertex_ai/      # Vertex AI integration (scripts/notebooks)
+├── data/                 # Raw and processed datasets
+│
+├── notebooks/            # Jupyter notebooks for development
+│   ├── 01_text_preprocessing.ipynb   # EDA + preprocessing
+│   └── 02_baseline_modeling.ipynb    # baseline model (TF-IDF + Logistic)
+│
+├── models/               # Serialized models/vectorizers
+│   ├── tfidf_vectorizer.pkl
+│   └── logreg_baseline.pkl
+│
+├── vertex_ai/            # (future) Vertex AI integration code
+│   └── deploy_baseline.ipynb / .py
+│
+└── README.md             # Project overview & instructions
 </code></pre>
 
 
