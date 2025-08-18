@@ -1,7 +1,11 @@
 pandas
 numpy
-scikit-learn
+scikit-learn==1.5.1
+joblib
+nltk
 matplotlib
 seaborn
-nltk
+kagglehub
+python-dotenv
+google-cloud-aiplatform
 jupyter
