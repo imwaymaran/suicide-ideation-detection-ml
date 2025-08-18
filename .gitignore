@@ -5,3 +5,4 @@ __pycache__/
 .env
 data/
 models/
+vertex_ai/vertex-runner-key.json
