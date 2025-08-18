@@ -1,16 +1,15 @@
 # Suicide Ideation Detection (ML Project)
 
-This project aims to build a machine learning model that can detect suicide ideation from Reddit posts. It is intended to explore the use of text classification for mental health applications.
+This project builds a text classifier to detect suicide ideation from Reddit posts. It includes a local baseline (TF-IDF + Logistic Regression) and deployment on Google Vertex AI.
 
-## Project Overview
+## Overview
+- **Goal:** Classify Reddit posts as suicidal vs. non-suicidal  
+- **Dataset:** Kaggle (r/SuicideWatch, r/depression, r/teenagers)  
+- **Approach:**  
+  1. Local baseline (TF-IDF + Logistic Regression)  
+  2. Cloud deployment on Vertex AI  
 
-- **Goal:** Classify Reddit posts as either indicative of suicide ideation or not.
-- **Dataset:** Reddit posts from `r/SuicideWatch`, `r/depression`, and `r/teenagers` (sourced from Kaggle).
-- **Approach:**
-  - Build and evaluate a baseline ML pipeline locally
-  - Re-implement the pipeline using Google AI tools such as Vertex AI or Gemini AI
-
-## Folder Structure
+## Structure
 
 <pre><code>.
 ├── data/                 # Raw and processed datasets
@@ -19,12 +18,12 @@ This project aims to build a machine learning model that can detect suicide idea
 │   ├── 01_text_preprocessing.ipynb   # EDA + preprocessing
 │   └── 02_baseline_modeling.ipynb    # baseline model (TF-IDF + Logistic)
 │
-├── models/               # Serialized models/vectorizers
-│   ├── tfidf_vectorizer.pkl
-│   └── logreg_baseline.pkl
+├── models/               # Saved pipeline
+│   ├── model.joblib
 │
-├── vertex_ai/            # (future) Vertex AI integration code
-│   └── deploy_baseline.ipynb / .py
+├── vertex_ai/            # Vertex AI integration code
+│   └── deploy_sklearn.py / .py
+│   └── predict.py / .py
 │
 └── README.md             # Project overview & instructions
 </code></pre>
